@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
     <!-- CDN do Tailwind CSS para estilização rápida -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configuração customizada do Tailwind para cores e fontes -->
+    <script src="/menu/menu.js"></script>
+
     <style>
         :root {
             --cor-primaria: #f059b1b6;
@@ -20,17 +23,35 @@
             --cor-fundo: #f0f2f5;
             --cor-texto: #f1579f;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             color: var(--cor-texto);
             background-color: var(--cor-fundo);
             line-height: 1.6;
         }
-        .bg-primary { background-color: var(--cor-primaria); }
-        .text-primary { color: var(--cor-primaria); }
-        .bg-secondary { background-color: var(--cor-secundaria); }
-        .text-secondary { color: var(--cor-secundaria); }
-        .logo-text { font-weight: 700; font-size: 1.5rem; color: #fff; }
+
+        .bg-primary {
+            background-color: var(--cor-primaria);
+        }
+
+        .text-primary {
+            color: var(--cor-primaria);
+        }
+
+        .bg-secondary {
+            background-color: var(--cor-secundaria);
+        }
+
+        .text-secondary {
+            color: var(--cor-secundaria);
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #fff;
+        }
 
         /* Estilos para o menu responsivo */
         @media (max-width: 767px) {
@@ -44,71 +65,45 @@
                 background-color: var(--cor-primaria);
                 padding: 1rem 0;
             }
+
             .nav-menu.active {
                 display: flex;
             }
         }
     </style>
 </head>
+
 <body class="bg-fundo">
 
-    <!-- CABEÇALHO -->
-    <header class="bg-primary text-white p-4 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo da Empresa - ao clicar, redireciona para a página principal -->
-            <a href="#" class="logo-text rounded-md hover:opacity-80 transition-opacity">E & G MODA</a>
-            
-            <!-- Botão do menu hambúrguer para dispositivos móveis -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md">
-                <i class="fas fa-bars text-white text-2xl"></i>
-            </button>
-
-            <!-- MENU DE NAVEGAÇÃO -->
-            <nav id="nav-menu" class="nav-menu md:flex md:space-x-8">
-                <a href="#" class="block md:inline-block py-2 px-4 rounded-md hover:bg-secondary transition-colors">Início</a>
-                
-                <!-- Item com Submenu -->
-                <div class="relative group">
-                    <button class="py-2 px-4 rounded-md hover:bg-secondary transition-colors md:cursor-pointer">
-                        Produtos <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <!-- Submenu escondido por padrão -->
-                    <div class="absolute hidden group-hover:block bg-primary text-white md:bg-white md:text-gray-800 rounded-md shadow-lg py-2 mt-2 w-48 transition-all duration-300 md:ml-0 md:left-0 md:top-full">
-                        <a href="#" class="block px-4 py-2 hover:bg-secondary md:hover:bg-gray-200">Vestido1</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-secondary md:hover:bg-gray-200">Vestido2</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-secondary md:hover:bg-gray-200">Vestido3</a>
-                    </div>
-                </div>
-
-                <a href="#" class="block md:inline-block py-2 px-4 rounded-md hover:bg-secondary transition-colors">Sobre</a>
-                <a href="#" class="block md:inline-block py-2 px-4 rounded-md hover:bg-secondary transition-colors">Contato</a>
-            </nav>
-        </div>
-    </header>
+    <div id="menu"></div>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="container mx-auto p-4 md:py-8 min-h-screen">
         <!-- Página de Produto -->
-        <section id="product-page" class="bg-white rounded-lg shadow-xl p-6 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+        <section id="product-page"
+            class="bg-white rounded-lg shadow-xl p-6 md:p-10 flex flex-col md:flex-row gap-8 items-start">
             <!-- Imagem do Produto -->
             <div class="w-full md:w-1/2">
-                <img src="img/vestido1.jfif" alt="vestido1" class="w-full h-auto rounded-lg shadow-md border-2 border-gray-100">
+                <img src="img/vestido1.jfif" alt="vestido1"
+                    class="w-full h-auto rounded-lg shadow-md border-2 border-gray-100">
             </div>
-<div class="arrows">
-    <button><img src="img/arrow-right-circle.svg" alt="seta direita"></button>
-    <button><img src="img/arrow-right-circle.svg" alt="seta esquerda"></button>
+            <div class="arrows">
+                <button><img src="img/arrow-right-circle.svg" alt="seta direita"></button>
+                <button><img src="img/arrow-right-circle.svg" alt="seta esquerda"></button>
 
-</div>
+            </div>
             <!-- Informações do Produto -->
             <div class="w-full md:w-1/2 flex flex-col justify-between">
                 <div>
                     <h1 class="text-3xl md:text-4xl font-bold mb-2">Camiseta Conforto Total</h1>
                     <p class="text-2xl text-primary font-bold mb-4">R$ 79,90</p>
-                    
+
                     <div class="mb-4 text-gray-700">
                         <h2 class="text-xl font-semibold mb-2">Descrição do Produto</h2>
-                        <p class="text-sm">Esta camiseta é feita com 100% algodão orgânico, proporcionando um toque macio e leve para o seu dia a dia. Seu design minimalista e corte moderno garantem conforto e estilo em qualquer ocasião. Disponível em várias cores.</p>
-                        
+                        <p class="text-sm">Esta camiseta é feita com 100% algodão orgânico, proporcionando um toque
+                            macio e leve para o seu dia a dia. Seu design minimalista e corte moderno garantem conforto
+                            e estilo em qualquer ocasião. Disponível em várias cores.</p>
+
                         <ul class="list-disc list-inside mt-4 text-sm">
                             <li>Material: 100% Algodão Orgânico</li>
                             <li>Cores: Preto, Branco, Cinza, Marinho</li>
@@ -120,7 +115,8 @@
 
                 <!-- Botão de Ação -->
                 <div class="mt-6 md:mt-0 w-full">
-                    <button class="w-full bg-primary text-white py-3 px-6 rounded-md font-semibold text-lg hover:bg-secondary transition-colors duration-300 ease-in-out shadow-lg">
+                    <button
+                        class="w-full bg-primary text-white py-3 px-6 rounded-md font-semibold text-lg hover:bg-secondary transition-colors duration-300 ease-in-out shadow-lg">
                         Adicionar ao Carrinho
                     </button>
                 </div>
@@ -138,7 +134,7 @@
                 <p>CNPJ: XX.XXX.XXX/XXXX-XX</p>
                 <p>E-mail: contato@suamarca.com.br</p>
             </div>
-            
+
             <!-- Informações dos Desenvolvedores -->
             <div>
                 <h3 class="font-bold text-lg mb-2">Desenvolvimento</h3>
@@ -149,10 +145,11 @@
 
     <!-- Script para o menu hambúrguer em dispositivos móveis -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             var menu = document.getElementById('nav-menu');
             menu.classList.toggle('active');
         });
     </script>
 </body>
+
 </html>
