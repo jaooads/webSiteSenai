@@ -14,3 +14,11 @@ async function carregarMenu() {
 }
 
 carregarMenu();
+
+const mobileBtn = document.getElementById("mobile-menu-button");
+const navMenu = document.getElementById("nav-menu");
+
+mobileBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active"); 
+});
+
