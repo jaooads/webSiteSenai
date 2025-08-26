@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E&G Moda</title>
+    <style>
+        /* Reset básico */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Arial, sans-serif;
+        }
+
+        body {
+          background: #fff;
+          color: #333;
+          text-align: center;
+        }
+
+        /* Container central para login/cadastro/recuperar */
+        .container {
+          max-width: 380px;
+          margin: 60px auto;
+          padding: 20px;
+          border: 1px solid #eee;
+          border-radius: 10px;
+          display: none;
+          background: #fff;
+        }
+
+        h2 {
+          margin-bottom: 20px;
+          color: #ff4da6;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px;
+          margin: 8px 0;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+        }
+
+        .btn {
+          width: 100%;
+          background: #ff4da6;
+          color: #fff;
+          padding: 12px;
+          margin-top: 10px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background: #e63990;
+        }
+
+        .links, .link {
+          margin-top: 15px;
+          font-size: 14px;
+          color: #555;
+        }
+
+        .links a, .link {
+          color: #ff4da6;
+          text-decoration: none;
+        }
+
+        .social-login {
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+          gap: 10px;
+        }
+
+        .social-login img {
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+
+        /* Ajustes responsivos */
+        @media (min-width: 768px) {
+          header h1 {
+            font-size: 26px;
+          }
+
+          .container {
+            max-width: 400px;
+          }
+
+          .banner {
+            padding: 100px 40px;
+          }
+
+          .banner h2 {
+            font-size: 48px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          nav {
+            display: flex !important;
+            flex-direction: row;
+            position: static;
+            border: none;
+            background: transparent;
+            width: auto;
+          }
+
+          nav a {
+            border: none;
+            color: white;
+            margin-left: 20px;
+          }
+
+          .menu-toggle {
+            display: none;
+          }
+
+          header {
+            justify-content: space-between;
+          }
+        }
+
+        /* Inicialmente mostra só o login */
+        #login { display: block; }
+    </style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="container" id="login">
+    <h2>Login</h2>
+    <form onsubmit="event.preventDefault(); mostrarPagina('home')">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+    <p class="links">Não possui conta? <a href="#" onclick="mostrarPagina('cadastro')">Cadastre-se</a></p>
+    <div class="social-login">
+        <a href="https://play.google.com/store/apps/details?id=com.google.android.gm" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="Google">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.facebook.katana" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+    </div>
+    <a href="#" class="link" onclick="mostrarPagina('recuperar')">Esqueci minha senha</a>
+</div>
+
+<!-- CADASTRO -->
+<div class="container" id="cadastro">
+    <h2>Cadastro</h2>
+    <form onsubmit="event.preventDefault(); mostrarPagina('home')">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+    <p class="links">Já possui conta? <a href="#" onclick="mostrarPagina('login')">Login</a></p>
+    <div class="social-login">
+        <a href="https://play.google.com/store/apps/details?id=com.google.android.gm" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="Google">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.facebook.katana" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+    </div>
+</div>
+
+<!-- RECUPERAR SENHA -->
+<div class="container" id="recuperar">
+    <h2>Recuperação senha</h2>
+    <form onsubmit="event.preventDefault(); alert('Email enviado!'); mostrarPagina('login')">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+</div>
+
+
+<script>
+    function mostrarPagina(id) {
+      document.querySelectorAll('.container, #home').forEach(el => el.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+      }
+    }
+</script>
+</body>
+</html>
