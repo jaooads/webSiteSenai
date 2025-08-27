@@ -98,3 +98,17 @@ button {
 .oculto {
     display: none;
 }
+
+#formRecuperar input,
+#formRecuperar button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#linkRecuperar {
+    cursor: pointer;
+    color: black;
+    text-transform: none;
+    text-decoration: none;
+}

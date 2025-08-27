@@ -26,6 +26,9 @@
                     <i class="fab fa-google google" title="Login com Google"></i>
                     <i class="fab fa-facebook facebook" title="Login com Facebook"></i>
                 </div>
+
+                <p id="linkRecuperar" style="cursor:pointer; color:blue; text-decoration:underline;">Esqueceu a senha?
+                </p>
             </div>
 
             <div id="formRegistro" class="oculto">
@@ -42,6 +45,20 @@
                 <button class="btn-login" id="voltarLogin" style="margin-top:10px;">Voltar ao login</button>
             </div>
 
+            <div id="formRecuperar" class="oculto">
+                <input type="text" id="recuperarNome" placeholder="Digite seu nome completo"><br>
+                <input type="email" id="recuperarEmail" placeholder="Digite seu email"><br>
+                <button class="btn-login" id="botaoRecuperar">Enviar</button>
+                <button class="btn-cadastrar" id="voltarLoginRec" style="margin-top:10px;">Voltar ao login</button>
+            </div>
+
+            <div id="formNovaSenha" class="oculto">
+                <h3>Nova Senha</h3>
+                <input type="password" id="novaSenha" placeholder="Digite a nova senha"><br>
+                <input type="password" id="confirmarSenha" placeholder="Confirme a nova senha"><br>
+                <button id="botaoAlterarSenha" class="btn-login">Alterar Senha</button>
+                <button id="voltarLoginNova" class="btn-cadastrar" style="margin-top:10px;">Voltar ao login</button>
+            </div>
         </div>
     </div>
 

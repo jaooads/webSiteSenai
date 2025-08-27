@@ -28,9 +28,8 @@ header {
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 8px;
+    width: auto;
+    height: 40px;
 }
 
 header input[type="text"] {
@@ -55,10 +54,15 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-nav li {
-    margin: 0 15px;
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
 }
 
 nav a {
@@ -128,5 +132,95 @@ nav a {
 .produto:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#nomeUsuario {
+    font-weight: 500;
+    margin-left: 5px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nomeUsuario::before {
+    content: "👤 ";
+    font-size: 14px;
+}
+
+#botaoSair {
+    margin-left: 10px;
+    padding: 2px 8px;
+    font-size: 12px;
+    border: none;
+    background: #ff4d4d;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoSair:hover {
+    background: #e60000;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Submenu */
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+    /* Desktop hover */
+}
+
+nav ul li ul.submenu li a {
+    padding: 10px;
+}
+
+/* Menu toggle para mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul li {
+        margin-right: 0;
+    }
+
+    nav ul li ul.submenu {
+        position: static;
+        box-shadow: none;
+    }
+
+    nav ul li:hover ul.submenu {
+        display: none;
+        /* Remove hover no mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
