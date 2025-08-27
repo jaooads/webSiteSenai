@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="fundo-modal" id="modalFundo">
+        <div class="modal">
+            <span class="botao-fechar" id="fecharModal">&times;</span>
+            <h2 id="tituloModal">Bem-vindo!</h2>
+
+            <div id="formLogin">
+                <input type="email" id="loginEmail" placeholder="Email"><br>
+                <input type="password" id="loginSenha" placeholder="Senha"><br>
+                <button class="btn-login" id="botaoLogin">Login</button>
+                <button class="btn-cadastrar" id="botaoRegistrar">Registrar</button>
+
+                <div class="icones-sociais">
+                    <i class="fab fa-google google" title="Login com Google"></i>
+                    <i class="fab fa-facebook facebook" title="Login com Facebook"></i>
+                </div>
+
+                <p id="linkRecuperar" style="cursor:pointer; color:blue; text-decoration:underline;">Esqueceu a senha?
+                </p>
+            </div>
+
+            <div id="formRegistro" class="oculto">
+                <input type="text" id="registroNome" placeholder="Nome completo"><br>
+                <input type="email" id="registroEmail" placeholder="Email"><br>
+                <input type="password" id="registroSenha" placeholder="Senha"><br>
+                <button class="btn-cadastrar" id="botaoCadastrar">Cadastrar</button>
+
+                <div class="icones-sociais">
+                    <i class="fab fa-google google" title="Registrar com Google"></i>
+                    <i class="fab fa-facebook facebook" title="Registrar com Facebook"></i>
+                </div>
+
+                <button class="btn-login" id="voltarLogin" style="margin-top:10px;">Voltar ao login</button>
+            </div>
+
+            <div id="formRecuperar" class="oculto">
+                <input type="text" id="recuperarNome" placeholder="Digite seu nome completo"><br>
+                <input type="email" id="recuperarEmail" placeholder="Digite seu email"><br>
+                <button class="btn-login" id="botaoRecuperar">Enviar</button>
+                <button class="btn-cadastrar" id="voltarLoginRec" style="margin-top:10px;">Voltar ao login</button>
+            </div>
+
+            <div id="formNovaSenha" class="oculto">
+                <h3>Nova Senha</h3>
+                <input type="password" id="novaSenha" placeholder="Digite a nova senha"><br>
+                <input type="password" id="confirmarSenha" placeholder="Confirme a nova senha"><br>
+                <button id="botaoAlterarSenha" class="btn-login">Alterar Senha</button>
+                <button id="voltarLoginNova" class="btn-cadastrar" style="margin-top:10px;">Voltar ao login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
