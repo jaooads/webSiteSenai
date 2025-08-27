@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLoja</title>
+    <link rel="stylesheet" type="text/css" href="homePage.css">
+    <link rel="stylesheet" href="../login/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="fundo-modal" id="modalFundo">
+        <div class="modal">
+            <span class="botao-fechar" id="fecharModal">&times;</span>
+            <h2 id="tituloModal">Bem-vindo!</h2>
+
+            <div id="formLogin">
+                <input type="email" id="loginEmail" placeholder="Email"><br>
+                <input type="password" id="loginSenha" placeholder="Senha"><br>
+                <button class="btn-login" id="botaoLogin">Login</button>
+                <button class="btn-cadastrar" id="botaoRegistrar">Registrar</button>
+
+                <div class="icones-sociais">
+                    <i class="fab fa-google google" title="Login com Google"></i>
+                    <i class="fab fa-facebook facebook" title="Login com Facebook"></i>
+                </div>
+            </div>
+
+            <div id="formRegistro" class="oculto">
+                <input type="text" id="registroNome" placeholder="Nome completo"><br>
+                <input type="email" id="registroEmail" placeholder="Email"><br>
+                <input type="password" id="registroSenha" placeholder="Senha"><br>
+                <button class="btn-cadastrar" id="botaoCadastrar">Cadastrar</button>
+
+                <div class="icones-sociais">
+                    <i class="fab fa-google google" title="Registrar com Google"></i>
+                    <i class="fab fa-facebook facebook" title="Registrar com Facebook"></i>
+                </div>
+
+                <button class="btn-login" id="voltarLogin" style="margin-top:10px;">Voltar ao login</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <img src="../img/logo.png" alt="MoreShop" class="logo">
+        <input type="text" placeholder="O que deseja procurar?">
+
+        <div class="menu-icons">
+            <a href="#">Atendimento</a>
+            <a href="#">Minha Conta</a>
+            <a href="#" id="carrinho">🛒 (0)</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Mais Vendidos</a></li>
+            <li><a href="#">Blusas</a></li>
+            <li><a href="#">Calças</a></li>
+            <li><a href="#">Casacos</a></li>
+            <li><a href="#">Vestidos</a></li>
+            <li><a href="#">Saias</a></li>
+        </ul>
+    </nav>
+
+    <section class="produtos-destaque">
+        <h2>MAIS VENDIDOS</h2>
+        <div class="produtos">
+            <div class="produto">
+                <img src="../img/vestido1.PNG">
+                <h3>Vestido Branco</h3>
+                <p>R$ 79,90</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="../img/vestido2.PNG">
+                <h3>Vestido Rosa</h3>
+                <p>R$ 79,90</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="../img/vestido3.PNG">
+                <h3>Vestido Branco</h3>
+                <p>R$ 79,90</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+    </section>
+    <script src="homePage.js"></script>
+    <script src="../login/login.js"></script>
+</body>
+
+</html>
