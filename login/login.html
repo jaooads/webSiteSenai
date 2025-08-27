@@ -7,6 +7,8 @@
     <title>Login/Registro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <div class="fundo-modal" id="modalFundo">
         <div class="modal">
             <span class="botao-fechar" id="fecharModal">&times;</span>
-            <h2 id="tituloModal">Bem-vindo!</h2>
+            <h2 id="tituloModal">Login</h2>
 
             <div id="formLogin">
                 <input type="email" id="loginEmail" placeholder="Email"><br>
@@ -23,11 +25,12 @@
                 <button class="btn-cadastrar" id="botaoRegistrar">Registrar</button>
 
                 <div class="icones-sociais">
-                    <i class="fab fa-google google" title="Login com Google"></i>
-                    <i class="fab fa-facebook facebook" title="Login com Facebook"></i>
+                    <img src="../img/google.png" alt="Login com Google" class="google" />
+                    <img src="../img/face.png" alt="Login com Facebook" class="facebook" />
+                    <img src="../img/insta.png" alt="Login com Instagram" class="instagram" />
                 </div>
 
-                <p id="linkRecuperar" style="cursor:pointer; color:blue; text-decoration:underline;">Esqueceu a senha?
+                <p id="linkRecuperar">Esqueceu a senha?
                 </p>
             </div>
 
@@ -38,8 +41,9 @@
                 <button class="btn-cadastrar" id="botaoCadastrar">Cadastrar</button>
 
                 <div class="icones-sociais">
-                    <i class="fab fa-google google" title="Registrar com Google"></i>
-                    <i class="fab fa-facebook facebook" title="Registrar com Facebook"></i>
+                    <img src="../img/google.png" alt="Login com Google" class="google" />
+                    <img src="../img/face.png" alt="Login com Facebook" class="facebook" />
+                    <img src="../img/insta.png" alt="Login com Instagram" class="instagram" />
                 </div>
 
                 <button class="btn-login" id="voltarLogin" style="margin-top:10px;">Voltar ao login</button>
