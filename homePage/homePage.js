@@ -41,3 +41,20 @@ submenuLinks.forEach(link => {
         }
     });
 });
+
+const modalFundo = document.getElementById("modalFundo");
+const botaoAbrirLogin = document.getElementById("abrirLogin"); // botão fora do modal
+const fecharModal = document.getElementById("fecharModal");
+
+botaoAbrirLogin.addEventListener("click", () => {
+    modalFundo.classList.add("ativo"); // abre modal
+});
+
+fecharModal.addEventListener("click", () => {
+    modalFundo.classList.remove("ativo"); // fecha modal
+});
+
+// opcional: fechar clicando fora do modal
+modalFundo.addEventListener("click", e => {
+    if (e.target === modalFundo) modalFundo.classList.remove("ativo");
+});
