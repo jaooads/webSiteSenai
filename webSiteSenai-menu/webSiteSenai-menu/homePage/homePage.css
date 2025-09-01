@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+}
+
+.logo {
+    width: 2px;
+    height: 2px;
+}
+
+.fundo-modal {
+    display: none !important; /* Oculta o modal por padrão */
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.fundo-modal.ativo {
+    display: flex; /* mostra o modal */
+}
+
+
+
+.top-bar {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: auto;
+    height: 60px;
+}
+
+header input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.menu-icons a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav {
+    background: #f9f9f9;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.produtos-destaque {
+    padding: 40px;
+    text-align: center;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+.produto {
+    width: 250px;
+    height: 420px;
+    /* Altura fixa */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    box-sizing: border-box;
+
+}
+
+.produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.produto h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    min-height: 40px;
+}
+
+.produto p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#nomeUsuario {
+    font-weight: 500;
+    margin-left: 5px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nomeUsuario::before {
+    content: "👤 ";
+    font-size: 14px;
+}
+
+#botaoSair {
+    margin-left: 10px;
+    padding: 2px 8px;
+    font-size: 12px;
+    border: none;
+    background: #ff4d4d;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoSair:hover {
+    background: #e60000;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Submenu */
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+    /* Desktop hover */
+}
+
+nav ul li ul.submenu li a {
+    padding: 10px;
+}
+
+/* Menu toggle para mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul li {
+        margin-right: 0;
+    }
+
+    nav ul li ul.submenu {
+        position: static;
+        box-shadow: none;
+    }
+
+    nav ul li:hover ul.submenu {
+        display: none;
+        /* Remove hover no mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+

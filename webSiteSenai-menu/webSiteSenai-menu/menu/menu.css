@@ -1,0 +1,58 @@
+       :root {
+           --cor-primaria: #f059b1b6;
+           --cor-secundaria: #8799a9;
+           --cor-fundo: #f0f2f5;
+           --cor-texto: #f1579f;
+       }
+
+       .bg-primary {
+           background-color: var(--cor-primaria);
+       }
+
+       .text-primary {
+           color: var(--cor-primaria);
+       }
+
+       .bg-secondary {
+           background-color: var(--cor-secundaria);
+       }
+
+       .text-secondary {
+           color: var(--cor-secundaria);
+       }
+
+       .logo-text {
+           font-weight: 700;
+           font-size: 1.5rem;
+           color: #fff;
+       }
+
+       .nav-menu{
+        background-color: red;
+       }
+
+    
+       @media (max-width: 767px) {
+           .nav-menu {
+               display: none;
+               flex-direction: column;
+               width: 100%;
+               position: absolute;
+               top: 64px;
+               left: 0;
+               background-color: var(--cor-primaria);
+               padding: 1rem 0;
+               z-index: 999;
+              
+           }
+    
+           .nav-menu.active {
+               display: flex;
+           }
+          
+           .nav-menu a {
+               text-align: center;
+               padding: 1rem;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+           }
+       }
