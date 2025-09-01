@@ -11,15 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
-       
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="fundo-modal justify-content-center align-items-center" id="modalFundo">
+    <div class="fundo-modal" id="modalFundo">
         <div class="modal">
             <span class="botao-fechar" id="fecharModal">&times;</span>
-            <h2 id="tituloModal">Bem-vindo!</h2>
+            <h2 id="tituloModal">Login</h2>
 
             <div id="formLogin">
                 <input type="email" id="loginEmail" placeholder="Email"><br>
@@ -28,11 +27,12 @@
                 <button class="btn-cadastrar" id="botaoRegistrar">Registrar</button>
 
                 <div class="icones-sociais">
-                    <i class="fab fa-google google" title="Login com Google"></i>
-                    <i class="fab fa-facebook facebook" title="Login com Facebook"></i>
+                    <img src="../img/google.png" alt="Login com Google" class="google" />
+                    <img src="../img/face.png" alt="Login com Facebook" class="facebook" />
+                    <img src="../img/insta.png" alt="Login com Instagram" class="instagram" />
                 </div>
 
-                <p id="linkRecuperar">Esqueceu a senha?</p>
+                <p id="linkRecuperar">Esqueceu a senha?
                 </p>
             </div>
 
@@ -43,8 +43,9 @@
                 <button class="btn-cadastrar" id="botaoCadastrar">Cadastrar</button>
 
                 <div class="icones-sociais">
-                    <i class="fab fa-google google" title="Registrar com Google"></i>
-                    <i class="fab fa-facebook facebook" title="Registrar com Facebook"></i>
+                    <img src="../img/google.png" alt="Login com Google" class="google" />
+                    <img src="../img/face.png" alt="Login com Facebook" class="facebook" />
+                    <img src="../img/insta.png" alt="Login com Instagram" class="instagram" />
                 </div>
 
                 <button class="btn-login" id="voltarLogin" style="margin-top:10px;">Voltar ao login</button>
@@ -58,6 +59,7 @@
             </div>
 
             <div id="formNovaSenha" class="oculto">
+                <h3>Nova Senha</h3>
                 <input type="password" id="novaSenha" placeholder="Digite a nova senha"><br>
                 <input type="password" id="confirmarSenha" placeholder="Confirme a nova senha"><br>
                 <button id="botaoAlterarSenha" class="btn-login">Alterar Senha</button>
@@ -74,7 +76,7 @@
         <input type="text" placeholder="O que deseja procurar?">
 
         <div class="menu-icons">
-            <a href="#">Atendimento</a>
+            <a href="./index.html">Home</a>
             <span id="nomeUsuario"></span>
             <a href="#" id="carrinho">🛒 (0)</a>
         </div>
@@ -122,13 +124,13 @@
     <section class="produtos-destaque">
         <h2>MAIS VENDIDOS</h2>
         <div class="produtos">
-            <a href="../index.html">
+            <a id="link" href="../produto/produto.html">
                 <div class="produto">
-                <img src="../img/vestido1.PNG">
-                <h3>Vestido Branco</h3>
-                <p>R$ 79,90</p>
-                <button class="btn-comprar">Comprar</button>
-            </div>
+                    <img src="../img/vestido1.PNG">
+                    <h3>Vestido Branco</h3>
+                    <p>R$ 79,90</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
             </a>
             <div class="produto">
                 <img src="../img/vestido2.PNG">
@@ -224,12 +226,13 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="homePage.js"></script>
-    <script src="../login/login.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <script src="homePage.js"></script>
+    <script src="../login/login.js"></script>
 </body>
 
 </html>
