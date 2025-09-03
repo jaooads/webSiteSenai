@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             formRecuperar.classList.add('oculto');
             formNovaSenha.classList.remove('oculto');
-            tituloModal.textContent = "Nova Senha";
         } else {
             alert("Nome ou email incorretos. Verifique e tente novamente.");
         }
