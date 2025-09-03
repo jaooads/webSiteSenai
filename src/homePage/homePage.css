@@ -11,36 +11,146 @@ body {
     height: 2px;
 }
 
-.fundo-modal {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+body {
+    font-family: Arial, sans-serif;
 }
-
-
-
 
 .fundo-modal {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+       z-index: 1050;
 }
 
-.fundo-modal.ativo {
+.meu-modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 350px;
+}
+
+.botao-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto 20px auto;
+    margin-bottom: 20px;
+    width: 188px;
+    font-weight: normal;
+    color: #FF85B9;
+    font-size: 40px;
+
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-weight: normal;
+    border: 1px solid #626262C9;
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-login {
+    background-color: #FF85B9;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-cadastrar {
+    background-color: #626262C9;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.icones-sociais img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icones-sociais {
     display: flex;
-    /* mostra o modal */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
 }
 
+.icones-sociais i {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icones-sociais i:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.icones-sociais i:active {
+    transform: scale(0.9) rotate(-5deg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.google {
+    color: #DB4437;
+}
+
+.facebook {
+    color: #3B5998;
+}
+
+.oculto {
+    display: none;
+}
+
+#formRecuperar input,
+#formRecuperar button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#linkRecuperar {
+    cursor: pointer;
+    color: #FF85B9;
+    text-transform: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.iconLogin {
+    width: 1px;
+    padding: 1px;
+}
 
 
 .top-bar {

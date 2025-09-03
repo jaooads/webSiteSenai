@@ -15,7 +15,7 @@ body {
        z-index: 1050;
 }
 
-.modal {
+.meu-modal {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
