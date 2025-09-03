@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     voltarLogin.addEventListener('click', () => {
         formRegistro.classList.add('oculto');
         formLogin.classList.remove('oculto');
-        tituloModal.textContent = "Bem-vindo!";
+        tituloModal.textContent = "Login";
     });
 
     // Abrir recuperação
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     voltarLoginRec.addEventListener('click', () => {
         formRecuperar.classList.add('oculto');
         formLogin.classList.remove('oculto');
-        tituloModal.textContent = "Bem-vindo!";
+        tituloModal.textContent = "Login";
     });
 
 
@@ -200,4 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modalFundo.style.display = 'block';
         });
     }
+
+
+
 });

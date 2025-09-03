@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     voltarLogin.addEventListener('click', () => {
         formRegistro.classList.add('oculto');
         formLogin.classList.remove('oculto');
-        tituloModal.textContent = "Bem-vindo!";
     });
 
     // Abrir recuperação
@@ -101,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     voltarLoginRec.addEventListener('click', () => {
         formRecuperar.classList.add('oculto');
         formLogin.classList.remove('oculto');
-        tituloModal.textContent = "Bem-vindo!";
     });
 
 
@@ -158,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Senha alterada com sucesso!");
         formNovaSenha.classList.add('oculto');
         formLogin.classList.remove('oculto');
-        tituloModal.textContent = "Bem-vindo!";
         document.getElementById("novaSenha").value = '';
         document.getElementById("confirmarSenha").value = '';
     });
@@ -204,7 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
         registroNome.value = registroEmail.value = registroSenha.value = '';
         formRegistro.classList.add('oculto');
         formLogin.classList.remove('oculto');
-        tituloModal.textContent = "Bem-vindo!";
     });
 
     // Social login
